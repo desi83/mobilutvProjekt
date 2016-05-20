@@ -1,4 +1,4 @@
-var decisionMakerApp = angular.module('decisionMaker', ['ngRoute','ngResource','ngCookies']);
+var app = angular.module('myApp', []);
 
 
 
@@ -18,7 +18,7 @@ decisionMakerApp.config(['$routeProvider',
       }).
       when('/placeinfo', {
         templateUrl: 'partials/placeinfo.html',
-        controller: 'placeinfoCtrl' 
+        controller: 'mapCtrl' 
       }). 
       when('/shuffle', {
         templateUrl: 'partials/shuffle.html',
