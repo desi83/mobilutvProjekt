@@ -8,21 +8,21 @@ decisionMakerApp.config(['$routeProvider',
       when('/home', {
         templateUrl: 'partials/home.html'        
       }).
-      when('/shakeme', {
-        templateUrl: 'partials/shakeme.html',
-        controller: 'shakemeCtrl'
+      when('/helpmedecide', {
+        templateUrl: 'partials/helpmedecide.html',
+        controller: 'helpmedecideCtrl'
       }).
-      when('/choice', {
-        templateUrl: 'partials/choice.html',
-        controller: 'choiceCtrl' 
+      when('/result', {
+        templateUrl: 'partials/result.html',
+        controller: 'resultCtrl' 
       }).
-      when('/getinspo', {
-        templateUrl: 'partials/getinspo.html',
-        controller: 'getinspoCtrl' 
+      when('/placeinfo', {
+        templateUrl: 'partials/placeinfo.html',
+        controller: 'placeinfoCtrl' 
       }). 
-      when('/recommendation', {
-        templateUrl: 'partials/recommendation.html',
-        controller: 'recommendationCtrl' 
+      when('/shuffle', {
+        templateUrl: 'partials/shuffle.html',
+        controller: 'shuffleCtrl' 
       }).
       when('/map', {
         templateUrl: 'partials/map.html',
