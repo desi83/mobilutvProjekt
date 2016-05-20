@@ -12,6 +12,58 @@ body {
 }
 
 
+.ghost-button {
+  display: inline-block;
+  width: 20px;
+  padding: 8px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: transparent;
+  color:lightblue;
+  
+}
+
+#home {
+  width: 30%;
+  font-size: 17px;
+  border: rgba(0,0,0,0);
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  margin-left: 0;
+  position: fixed;
+  top: 0;
+  right: 35%;
+}
+
+#back {
+  width: 20px;
+  font-size: 17px;
+  border: rgba(0,0,0,0);
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  margin-left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 .ghost-button-rounded-corners {
   display: inline-block;
@@ -26,18 +78,8 @@ body {
   text-decoration: none;
   margin-left: calc(50% - 100px);
 }
-#home {
-  width: 100%;
-  border: rgba(0,0,0,0);
-  display: inline-block;
-  background-color: transparent;
-  color: #fff;
-  border-radius: 5px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  margin-left: 0;
-}
+
+
 .ghost-button-rounded-corners:hover,
 .ghost-button-rounded-corners:active {
   background-color: lightblue;
@@ -45,24 +87,6 @@ body {
   
 }
 
-  .ghost-button {
-    display: inline-block;
-    width: 20px;
-    padding: 8px;
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    text-align: center;
-    outline: none;
-    text-decoration: none;
-  }
-  .ghost-button:hover,
-  .ghost-button:active {
-    background-color: transparent;
-    color:lightblue;
-    
-  }
   #map {
       height: 200px;
       width: 100%;
