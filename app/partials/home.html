@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DecideMaker</title>
+<style type="text/css">
+
+#home {
+  width: 100%;
+  border: rgba(0,0,0,0);
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  margin-left: 0;
+}
+
+.ghost-button-rounded-corners {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  margin-left: calc(50% - 100px);
+}
+
+.ghost-button-rounded-corners:hover,
+.ghost-button-rounded-corners:active {
+  background-color: lightblue;
+  color:#fff;
+  
+}
+</style>
+
+</head>
+
+
+<body>
+
+<!-- Logo -->
+	<div ng-hide="logo">
+      <p><span class="glyphicon glyphicon-road" ></span></p>
+      <h2>- We make it easier by helping you choose!</h2></br></br></br>
+    </div>
+
+<!-- To shake-page -->
+    <a href="#/helpmedecide" ng-hide="menuBtn1" ng-click="shakePage()" type="button" class="ghost-button-rounded-corners">Help me decide</a> 
+
+<!-- To inspiration-page -->
+    <a href="#/shuffle" ng-hide="menuBtn2" ng-click="getInspo()" type="button" class="ghost-button-rounded-corners" >Shuffle</a>
+
+
+</body>
+</html>
