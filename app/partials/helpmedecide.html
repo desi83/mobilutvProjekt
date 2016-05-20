@@ -1,15 +1,176 @@
 <!DOCTYPE html>
-<ng-include src="'partials/header.html'" ng-controller="headerCtrl"></ng-include>
+<!-- saved from url=(0057)http://xml.csc.kth.se/~amlinden/mobdev/Decider/index.html -->
+<html class="ui-mobile">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}
+	</style>
+    <!-- måste komma först, de nedan -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>    
+    <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="lib/shake.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+	<!-- saved from url=(0047)http://evothings.com/demos/dome_pics/index.html -->
+    <!--<base href="http://evothings.com/demos/dome_pics/index.html">--><!--<base href=".">-->
+    <base href=".">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Decider</title>
+    <script>
+    	// Redirect console.log to Evothings Workbench, so you can see data under 'Tools'
+    	if (window.hyper && window.hyper.log) { hyper.log = console.log }
+    </script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--<script src="js/helpmedecideCtrl.js"></script>-->
+</head>
+<body class="ui-mobile-viewport ui-overlay-a" data-pinterest-extension-installed="cr1.39.1">
+	<div data-role="page" data-url="/demos/dome_pics/index.html" tabindex="0" class="ui-page ui-page-theme-a ui-page-active" style="min-height: 100%;">
+ 
 
-<form ng-hide="showForm" action="" onsubmit="return false;">
+		<script>
 
 
-	<input ows="1" id="choice1" placeholder="Option">
-	<input rows="1" id="choice2" placeholder="Option">
-	<p id="newTextarea"></p>
+		window.onload = function() {
 
-	<button id="add" class="ghost-button-rounded-corners">+</button>
-	<button id="remove" class="ghost-button-rounded-corners">-</button>
-	</br><span style="color:lightblue; font-size: 20px;" > Shake me</span>  
+		    //create a new instance of shake.js.
+		    var myShakeEvent = new Shake({
+		        threshold: 15
+		        
+		    });
 
-</form>
+		    // start listening to device motion
+		    myShakeEvent.start();
+
+		    // register a shake event
+		    window.addEventListener('shake', shakeEventDidOccur, false);
+
+		    //shake event callback
+		    function shakeEventDidOccur () {
+		        randchoose();
+		        //put your own code here etc.
+		        //alert('You shake!');
+		        hideshow();
+
+		    }
+		};
+
+		var choicefields = ['choice1','choice2'];
+
+		//choses random of options to 
+		function randchoose() {
+		    choices = []
+		    choices.push(document.getElementById("choice1").value);
+		    choices.push(document.getElementById("choice2").value);
+		    if(choicefields.length > 0){
+		        for (var j=0; j<choicefields.length;j++){
+		            newinputIDValue = document.getElementById(choicefields[j]).value
+		            choices.push(newinputIDValue);
+		        }    
+		    }
+		    if (choices.length == 0) return;
+		    document.getElementById("result").innerHTML = choices[Math.floor(Math.random() * choices.length)];
+		}
+
+		</script>
+<!-- 		<div ng-app= "myApp">
+			<div ng-controller="helpmedecideCtrl"> -->
+<!-- 			<div ng-show="option"> -->
+<div id="option">
+
+				<a id="back" href="home.html" class="ghost-button" >
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a href"home.html" id="home" ng-hide="homeBtn" type="button" class="ghost-button-rounded-corners">
+					<span class="glyphicon glyphicon-home"></span>
+				</a>
+				<form action="" onsubmit="return false;">
+					<input rows="1" id="choice1" placeholder="Option"> 
+					<input rows="1" id="choice2" placeholder="Option">
+					<p id="newTextarea"></p>
+					</br>
+					<button id="add" class="ghost-button-rounded-corners">+</button>
+					<button id="remove" class="ghost-button-rounded-corners">-</button>
+					</br>
+					</br>
+					<span style="color:lightblue; font-size: 40px;" >Shake to Shuffle!</span>
+					</br>
+				</form>
+</div>
+<!-- 			</div>  -->
+		<!-- HIDE -->
+<!-- 			<div ng-show="result"> -->
+<div id="result" style="display: none">
+				<form>
+					<span style="color:lightblue; font-size: 40px;" >
+						You should choose: 
+						<div id="result"></div>
+					</span>
+				</form> 
+<!-- 			</div>
+		</div>
+	</div> -->
+</div>
+	<script>
+		function hideshow(){
+			alert(document.getElementById('result').style.display);
+
+			if (!document.getElementById){
+				return
+			}	
+			if (document.getElementById('result').style.display=="inline-block"){
+				document.getElementById('result').style.display="none"
+			}
+			else {
+				document.getElementById('result').style.display="inline-block"
+				alert(document.getElementById('result').style.display);
+
+			}
+		}
+
+	    document.getElementById("add").addEventListener("click",addform);
+	    var i=2;
+
+	    function addform() {
+	        i++;
+	        textareaID = "choice"+i
+	        choicefields.push(textareaID);
+	        var newInput = document.createElement("INPUT");
+	        newInput.setAttribute('id',textareaID);
+	        newInput.setAttribute('placeholder','Option'); //NYTT
+	        var textnode = document.createTextNode('');
+	        newInput.appendChild(textnode);
+	        document.getElementById("newTextarea").appendChild(newInput);
+
+		}
+
+	    document.getElementById("remove").addEventListener("click",removeform)
+
+		function removeform() {
+			lastOption = choicefields[choicefields.length-1]
+			if (lastOption != 'choice1' && lastOption != 'choice2'){
+				remove = document.getElementById(lastOption)
+				console.log("det här borde vara node: " + remove)
+				document.getElementById('newTextarea').removeChild(remove);
+				choicefields.splice(choicefields.length-1,1);
+			}
+			else {
+				alert('At least two options are needed.')
+			}
+		}
+
+	</script>
+    
+</body>
+</html>
