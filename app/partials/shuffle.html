@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<ng-include src="'partials/header.html'" ng-controller="headerCtrl"></ng-include>
+<style>
+	.ghost-button-rounded-corners {
+	  display: inline-block;
+	  width: 200px;
+	  padding: 8px;
+	  background-color: transparent;
+	  color: #fff;
+	  border: 1px solid lightblue;
+	  border-radius: 5px;
+	  text-align: center;
+	  outline: none;
+	  text-decoration: none;
+	  margin-left: calc(50% - 100px);
+	}
+
+	.ghost-button-rounded-corners:hover,
+	.ghost-button-rounded-corners:active {
+	  background-color: lightblue;
+	  color:#fff;
+	  
+	}
+</style>
+<!-- Find me some and button for showing options -->
+<div ng-hide="showInspo">
+  <span style="color:lightblue; font-size: 40px;" >Find</br>
+  me</br>
+  some</span>
+  </br>
+  <button ng-click="inspoChoice()" class="ghost-button-rounded-corners" >
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  </button>
+</div>
+
+<!-- Buttons for coffe and beer -->
+<div ng-hide="coffeBeerBtn">
+	<a href="#/placeinfo" class="ghost-button-rounded-corners">Coffee</a></br></br>
+	<a href="#/placeinfo"class="ghost-button-rounded-corners">Beer</a></br>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<ng-include src="'partials/header.html'" ng-controller="headerCtrl"></ng-include>
+<style>
+	.ghost-button {
+	  display: inline-block;
+	  width: 20px;
+	  padding: 8px;
+	  background-color: transparent;
+	  color: #fff;
+	  border: 1px solid transparent;
+	  border-radius: 5px;
+	  text-align: center;
+	  outline: none;
+	  text-decoration: none;
+	}
+	.ghost-button:hover,
+	.ghost-button:active {
+	  background-color: transparent;
+	  color:lightblue;
+	  
+	}
+</style>
+<ng-include src="'partials/header.html'" ng-controller="js/headerCtrl"></ng-include>
+	<p style="color:lightblue; font-size: 40px;" id="namn"></p></br>
+	<p style="color:lightblue; font-size: 15px;" id="order"></p></br>
+	<p style="color:lightblue; font-size: 20px;" id="dist"></p>
+	<a href="#/map" class="ghost-button">
+	<span class= "glyphicon glyphicon-map-marker"></span></a>
