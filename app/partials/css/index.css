@@ -3,7 +3,7 @@
     .img-circle {
     border-radius: 50%;
 }
-body{
+body {
   /*background: #99CCCC;*/
   background: url(bakgrund3.jpg) no-repeat;
   background-size: cover;
@@ -74,7 +74,7 @@ h1 {
     color:lightblue;
 }
 h2 {
-    font-size: 15px;
+    font-size: 70px;
     font-family: verdana;
     color:lightblue;
     margin-left: 5%;
