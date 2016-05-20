@@ -45,24 +45,28 @@ body{
   
 }
 
-.ghost-button {
-  display: inline-block;
-  width: 20px;
-  padding: 8px;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-}
-.ghost-button:hover,
-.ghost-button:active {
-  background-color: transparent;
-  color:lightblue;
-  
-}
+  .ghost-button {
+    display: inline-block;
+    width: 20px;
+    padding: 8px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+  }
+  .ghost-button:hover,
+  .ghost-button:active {
+    background-color: transparent;
+    color:lightblue;
+    
+  }
+  #map {
+      height: 200px;
+      width: 100%;
+  } 
 
 h1 {
     font-size: 40px;
@@ -84,10 +88,4 @@ h2 {
   margin-left: calc(50% - 50px); 
 }
 
-#map {
-    height: 0px;
-    width: 100%;
-    opacity: 0;
-    overflow: hidden;
-}
 </style>

@@ -1,5 +1,6 @@
+var app = angular.module('myApp', []);
 app.controller('mapCtrl', function($scope){ 
-  $scope.allMap = function(){
+  //$scope.allMap = function(){
     $scope.cafes = [
         {
             title: "Café Saturnus",
@@ -116,6 +117,6 @@ app.controller('mapCtrl', function($scope){
     }
 
     $scope.getloc();
-};
+//};
 
 });
