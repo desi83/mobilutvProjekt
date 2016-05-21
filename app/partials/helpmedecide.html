@@ -47,7 +47,6 @@
 		    //create a new instance of shake.js.
 		    var myShakeEvent = new Shake({
 		        threshold: 15
-		        
 		    });
 
 		    // start listening to device motion
@@ -59,10 +58,7 @@
 		    //shake event callback
 		    function shakeEventDidOccur () {
 		        randchoose();
-		        //put your own code here etc.
-		        //alert('You shake!');
 		        hideshow();
-
 		    }
 		};
 
@@ -84,17 +80,16 @@
 		}
 
 		</script>
-<!-- 		<div ng-app= "myApp">
-			<div ng-controller="helpmedecideCtrl"> -->
-<!-- 			<div ng-show="option"> -->
-<div id="option">
 
+		<div id="option" style="display: inline-block">
 				<a id="back" href="home.html" class="ghost-button" >
 				    <span class="glyphicon glyphicon-chevron-left"></span>
 				</a>
 				<a href"home.html" id="home" ng-hide="homeBtn" type="button" class="ghost-button-rounded-corners">
 					<span class="glyphicon glyphicon-home"></span>
 				</a>
+				</br>
+				</br>
 				<form action="" onsubmit="return false;">
 					<input rows="1" id="choice1" placeholder="Option"> 
 					<input rows="1" id="choice2" placeholder="Option">
@@ -104,40 +99,47 @@
 					<button id="remove" class="ghost-button-rounded-corners">-</button>
 					</br>
 					</br>
-					<span style="color:lightblue; font-size: 40px;" >Shake to Shuffle!</span>
+					<span style="color:lightblue; font-size: 40px;">Shake to shuffle!</span>
 					</br>
 				</form>
-</div>
-<!-- 			</div>  -->
+			</div>
 		<!-- HIDE -->
-<!-- 			<div ng-show="result"> -->
-<div id="result" style="display: none">
+			<div id="resultdiv" style="display: none">
+				<button id="back2" class="ghost-button" >
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				</button>
+				<a href"home.html" id="home" ng-hide="homeBtn" type="button" class="ghost-button-rounded-corners">
+					<span class="glyphicon glyphicon-home"></span>
+				</a>
 				<form>
 					<span style="color:lightblue; font-size: 40px;" >
 						You should choose: 
 						<div id="result"></div>
 					</span>
 				</form> 
-<!-- 			</div>
-		</div>
-	</div> -->
-</div>
+			</div>
+
 	<script>
 		function hideshow(){
-			alert(document.getElementById('result').style.display);
-
-			if (!document.getElementById){
-				return
-			}	
-			if (document.getElementById('result').style.display=="inline-block"){
-				document.getElementById('result').style.display="none"
+			if (document.getElementById('resultdiv').style.display=='none'){
+				//alert('hej')
+				document.getElementById('resultdiv').style.display='inline-block'
 			}
-			else {
-				document.getElementById('result').style.display="inline-block"
-				alert(document.getElementById('result').style.display);
-
+			if (document.getElementById('option').style.display=='inline-block'){
+				//alert('hej2')
+				document.getElementById('option').style.display='none'
 			}
 		}
+
+		function gobackextra(){
+			if (document.getElementById('option').style.display=='none'){
+				//alert('hej3')
+				document.getElementById('option').style.display='inline-block'
+				document.getElementById('resultdiv').style.display='none'
+			}
+		}
+
+		document.getElementById("back2").addEventListener('click',gobackextra);
 
 	    document.getElementById("add").addEventListener("click",addform);
 	    var i=2;
@@ -148,11 +150,10 @@
 	        choicefields.push(textareaID);
 	        var newInput = document.createElement("INPUT");
 	        newInput.setAttribute('id',textareaID);
-	        newInput.setAttribute('placeholder','Option'); //NYTT
+	        newInput.setAttribute('placeholder','Option'); 
 	        var textnode = document.createTextNode('');
 	        newInput.appendChild(textnode);
 	        document.getElementById("newTextarea").appendChild(newInput);
-
 		}
 
 	    document.getElementById("remove").addEventListener("click",removeform)
@@ -169,7 +170,6 @@
 				alert('At least two options are needed.')
 			}
 		}
-
 	</script>
     
 </body>
