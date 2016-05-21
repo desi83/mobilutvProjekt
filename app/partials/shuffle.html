@@ -55,18 +55,20 @@
     	<a href="home.html" id="home"class="ghost-button-rounded-corners">
       		<span class="glyphicon glyphicon-home"></span>
 		</a></br>
-	  <span style="color:lightblue; font-size: 40px;" >Find</br>
-	  me</br>
-	  some</span>
-	  </br>
-	  <button ng-click="inspoChoice()" class="ghost-button-rounded-corners" >
+	  	<div id="findme">
+		  <span style="color:lightblue; font-size: 50px;" >Find</br>
+			me</br>
+		 	some</span>
+	 		</br>
+		</div>
+	  <button ng-click="inspoChoice()" id="findmebutton" class="ghost-button-rounded-corners" >
 	  <span class="glyphicon glyphicon-chevron-right"></span>
 	  </button>
 
 		<!-- Buttons for coffe and beer -->
 		<div ng-hide="coffeBeerBtn">
-			<a href="placeinfo.html" class="ghost-button-rounded-corners">Coffee</a></br>
-			<a href="placeinfo.html"class="ghost-button-rounded-corners">Beer</a></br>
+			<a href="placeinfo.html" id="findmebutton" class="ghost-button-rounded-corners">Coffee</a></br>
+			<a href="placeinfo.html" id="findmebutton" class="ghost-button-rounded-corners">Beer</a></br>
 		</div>
 	</div>
 </div>
