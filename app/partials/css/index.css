@@ -21,6 +21,10 @@ body{
   font-size: 17px;
 }
 
+#menubutton{
+  font-size: 17px;
+}
+
 #cafeinfo{
   margin-left: 20px;
   margin-top: 70px;
@@ -147,6 +151,18 @@ h2 {
   color:lightblue; 
   font-size: 100px; 
   margin-left: calc(50% - 50px); 
+}
+
+#logo {
+  padding:50px;
+}
+
+#logo-text{
+  font-size: 15px; 
+  font-family: verdana;
+  color:lightblue; 
+  text-align: center;
+  width: 100%;
 }
 
 </style>
