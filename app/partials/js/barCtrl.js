@@ -1,5 +1,5 @@
 var app = angular.module('myApp', []);
-app.controller('mapCtrl', function($scope){ 
+app.controller('barCtrl', function($scope){ 
   //$scope.allMap = function(){
     $scope.bars = [
         {
@@ -75,9 +75,9 @@ app.controller('mapCtrl', function($scope){
         if ($scope.bars[i].koordinat == closestResp.request.destination){
           console.log($scope.bars[i].title)
           console.log(closestResp.routes[0].legs[0].distance.text)
-          document.getElementById("dist").innerHTML = closestResp.routes[0].legs[0].distance.text;
-          document.getElementById("namn").innerHTML = $scope.bars[i].title;
-          document.getElementById("order").innerHTML = "Order: " + $scope.bars[i].order;
+          document.getElementById("bardist").innerHTML = closestResp.routes[0].legs[0].distance.text;
+          document.getElementById("barnamn").innerHTML = $scope.bars[i].title;
+          document.getElementById("barorder").innerHTML = "Order: " + $scope.bars[i].order;
         }
       } 
       console.log($scope.bars)
