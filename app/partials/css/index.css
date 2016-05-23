@@ -103,6 +103,25 @@ body{
   
 }
 
+.ghost-button-rounded-corners-small {
+  display: inline-block;
+  width: 35px;
+  padding: 4px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  /*margin-left: calc(50% - 100px);*/
+}
+
+.ghost-button-rounded-small:hover,
+.ghost-button-rounded-small:active {
+  background-color: lightblue;
+  color:#fff;
+
   #map {
       height: 200px;
       width: 100%;
