@@ -13,7 +13,7 @@ body{
 
 #findme{
   margin-left: 20px;
-  margin-top: 120px;
+  margin-top: 130px;
 }
 
 #findmebutton{
@@ -23,7 +23,7 @@ body{
 
 #cafeinfo{
   margin-left: 20px;
-  margin-top: 70px;
+  margin-top: 90px;
   
 }
 
@@ -112,6 +112,7 @@ body{
   border: 1px solid lightblue;
   border-radius: 5px;
   text-align: center;
+  font-size: 17px;
   outline: none;
   text-decoration: none;
   /*margin-left: calc(50% - 100px);*/
@@ -121,9 +122,10 @@ body{
 .ghost-button-rounded-small:active {
   background-color: lightblue;
   color:#fff;
-
+}
   #map {
-      height: 200px;
+    margin-top: 30px;
+      height: 250px;
       width: 100%;
   } 
 

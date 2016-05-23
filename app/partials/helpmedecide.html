@@ -8,7 +8,7 @@
     <!-- måste komma först, de nedan -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'> -->
@@ -28,8 +28,10 @@
         shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Decider</title>
     <script>
+    	element.requestFullscreen();
     	// Redirect console.log to Evothings Workbench, so you can see data under 'Tools'
     	if (window.hyper && window.hyper.log) { hyper.log = console.log }
+
     </script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -85,10 +87,21 @@
 		</script>
 
 		<style type="text/css">
+		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: rgba(255,255,255,0.7);
+		}
+			input, select, textarea{
+				color:white;
+			}
+			textarea:focus, input:focus{
+				color:white;
+			}
 			input {
 				background-color: transparent;
 				border: none;
-				border-bottom: 2px solid #ADD8E6;
+				border-bottom: 1px solid #ADD8E6;
+				border-radius: 0px;
+				color: white;
 				margin: 10px 0 10px 0;
 				padding: 3px;
 				width: 60%;
@@ -97,6 +110,32 @@
 			}
 			form {
 				text-align: center;
+			}
+			.bubble 
+			{
+				position: relative;
+				width: 240px;
+				height: 85px;
+				padding: 0px;
+				background: rgba(255,255,255,0.2);
+				-webkit-border-radius: 13px;
+				-moz-border-radius: 13px;
+				border-radius: 13px;
+				margin-left: calc(50% - 120px);
+			}
+
+			.bubble:after 
+			{
+				content: '';
+				position: absolute;
+				border-style: solid;
+				border-width: 21px 16px 0;
+				border-color: rgba(255,255,255,0.2) transparent;
+				display: block;
+				width: 0;
+				z-index: 1;
+				bottom: -21px;
+				left: 31px;
 			}
 		</style>		
 
@@ -116,11 +155,14 @@
 					<input rows="1" id="choice2" placeholder="Option">
 					<p id="newTextarea"></p>
 					</br>
+					</br>
 					<button id="add" class="ghost-button-rounded-corners-small">+</button>
 					<button id="remove" class="ghost-button-rounded-corners-small">-</button>
-					</br>
-					</br>
-					<span style="color:lightblue; font-size: 30px;">Shake to shuffle!</span>
+					</br></br></br></br></br>
+					<div class="bubble">
+						</br>
+						<span style="color:rgba(255,255,255,0.8); font-size: 30px; text-align: center; position: static; bottom: 2;">Shake!</span>
+					</div>
 					</br>
 				</form>
 			</div>
